@@ -69,6 +69,10 @@ static PromotionViewController* _sharedMyPromotionView = nil;
                                                    [UIColor whiteColor], UITextAttributeTextColor,
                                                     nil] forState:UIControlStateNormal];
         viewName = PROMOTION_VIEW_NAME;
+        
+        // TrongV - 08/12/2013 - Show Tab bar as default
+        self.tabBarDisplayType = TAB_BAR_DISPLAY_SHOW;
+        
         self.trackedViewName = viewName;
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkLoadDataIfNeed) name:UIApplicationDidBecomeActiveNotification object:nil];
     }

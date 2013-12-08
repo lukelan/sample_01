@@ -341,7 +341,7 @@
     [self setObject:info forKey:viewInfoKey forConfirmView:forConfirmView];
 }
 
--(BOOL)initInputViewsWithLoadInfo:(NSMutableDictionary*)loadInfo forConfirmView:(BOOL)forConfirmView
+-(void)initInputViewsWithLoadInfo:(NSMutableDictionary*)loadInfo forConfirmView:(BOOL)forConfirmView
 {
     NSArray *paramNameList = [self getParamNameListForConfirmView:forConfirmView];
     NSArray *paramTypeList = [self getParamTypeListForConfirmView:forConfirmView];
@@ -418,7 +418,7 @@
             }
         }
     }
-    return YES;
+//    return YES;
 }
 
 -(NSMutableDictionary *)dictionaryInputForSending:(BOOL)sending forConfirmView:(BOOL)forConfirmView

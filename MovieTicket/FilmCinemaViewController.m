@@ -75,10 +75,15 @@
         self.session_version_id_fromCinemaFilmView = -1;
         
         viewName = FILM_CINEMA_VIEW_NAME;
+        
+        self.tabBarDisplayType = TAB_BAR_DISPLAY_HIDE;
+        
         NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
         [center addObserver:self selector:@selector(didLoadCinemaWithDistance:) name:NOTIFICATION_NAME_CINEMA_WITH_DISTANCE_DID_LOAD object:nil];
         [center addObserver:self selector:@selector(didChangeCity:) name:NOTIFICATION_NAME_NEW_CITY object:nil];
         [center addObserver:self selector:@selector(didLoadCinema:) name:NOTIFICATION_NAME_CINEMA_DID_LOAD object:nil];
+        
+        //[self setHidesBottomBarWhenPushed:YES];
     }
     return self;
 }
@@ -176,7 +181,7 @@
     AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [delegate setCustomBackButtonForNavigationItem:self.navigationItem];
     [delegate setTitleLabelForNavigationController:self withTitle:film.film_name];
-    
+
     self.trackedViewName = viewName;
 }
 
@@ -187,7 +192,7 @@
 //        if (self.cinemaGroupSegment.selectedSegmentIndex < self.listOfCinenaGroup.count) {
 //                NSDictionary* cinemaG = [self.listOfCinenaGroup objectAtIndex:self.cinemaGroupSegment.selectedSegmentIndex];
 //            if (cinemaG)
-//            {
+//            { 
 //                int GroupId = [[cinemaG objectForKey:@"cinemaGrpId"] intValue];
 //                [APIManager setValueForKey:[NSNumber numberWithInt:GroupId] ForKey:[NSString stringWithFormat:@"%@_%d",KEY_STORE_GROUP_ID_CINEMA, [AppDelegate getMyLocationId]]];
 //            }

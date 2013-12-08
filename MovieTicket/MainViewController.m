@@ -132,6 +132,10 @@ static MainViewController* _sharedMyMainView = nil;
                                                    [UIColor whiteColor], UITextAttributeTextColor,
                                                    nil] forState:UIControlStateNormal];
         viewName = MAIN_VIEW_NAME;
+        
+        // TrongV - 08/12/2013 - Show Tab bar as default
+        self.tabBarDisplayType = TAB_BAR_DISPLAY_SHOW;
+        
         self.trackedViewName = viewName;
     }
     return self;
@@ -217,9 +221,11 @@ static MainViewController* _sharedMyMainView = nil;
     [self.filmPageShowing setDelegate:self];
     [self selectedSegmentChanged];
     [self loadLayoutFilm:YES];
-    UIBarButtonItem *btsearch = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(actionDownload:)];
-    NSArray *myButtonArray = [[NSArray alloc] initWithObjects: btsearch, nil];
-    self.navigationItem.rightBarButtonItems = myButtonArray;
+    
+    // Disable ADN
+//    UIBarButtonItem *btsearch = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(actionDownload:)];
+//    NSArray *myButtonArray = [[NSArray alloc] initWithObjects: btsearch, nil];
+//    self.navigationItem.rightBarButtonItems = myButtonArray;
 }
 
 -(void)actionDownload:(id)sender
@@ -460,6 +466,7 @@ static MainViewController* _sharedMyMainView = nil;
     [filmDetail setFilm:film];
     [filmDetail setDelegate:self];
     [filmDetail setHidesBottomBarWhenPushed:YES];
+    [filmDetail setTabBarDisplayType:TAB_BAR_DISPLAY_HIDE];
     [currentView pushViewController:filmDetail animated:YES];
 }
 

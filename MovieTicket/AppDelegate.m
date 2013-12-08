@@ -517,11 +517,16 @@ double lastSentLog = 0;
         return (NSString *)url;
     }];
     
+    #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+    
     //Tranking Conversion only support ios 6.0 or later
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0)
     {
         [GoogleConversionPing pingWithConversionId:@"983463027" label:@"FaebCO3VswUQ8-j51AM" value:@"5000" isRepeatable:NO idfaOnly:YES];
     }
+    
+    #pragma GCC diagnostic warning "-Wdeprecated-declarations"
+    
 //    LOG_123PHIM(@"didFinishLaunchingWithOptions");
 #if IS_DEBUG_LOG_MEM
     [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(logMemory) userInfo:nil repeats:YES];
@@ -608,6 +613,7 @@ double lastSentLog = 0;
     [self.tabBarController.view setFrame:CGRectZero];
 
     [self.tabBarController.tabBar setBackgroundColor:[UIColor redColor]];
+    
     [self.tabBarController.tabBar setSelectionIndicatorImage:[UIImage imageNamed:@"footer-bar-active.png"]];
     [self.tabBarController.tabBar setBackgroundImage:[UIImage imageNamed:@"footer-bar.png"]];
     self.tabBarController.selectedIndex=1;

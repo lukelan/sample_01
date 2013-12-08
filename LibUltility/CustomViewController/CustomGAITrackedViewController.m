@@ -34,6 +34,9 @@
         // Custom initialization
         _skipUpdateTabBar = NO;
         isSkipWarning = NO;
+        
+        // TrongV - 08/12/2013 - Hide Tab bar as default
+        _tabBarDisplayType = TAB_BAR_DISPLAY_HIDE;
     }
     return self;
 }
@@ -108,8 +111,8 @@
             [btnNote.titleLabel setFont:[UIFont getFontBoldSize10]];
             [btnNote.titleLabel setTextAlignment:UITextAlignmentCenter];
             CGSize sizeText = [@"ABC" sizeWithFont:btnNote.titleLabel.font];
-            NSString *thePath = [[NSBundle mainBundle] pathForResource:@"waiting_otp" ofType:@"png"];
-           // UIImage *prodImg = [[UIImage alloc] initWithContentsOfFile:thePath];
+            //NSString *thePath = [[NSBundle mainBundle] pathForResource:@"waiting_otp" ofType:@"png"];
+            //UIImage *prodImg = [[UIImage alloc] initWithContentsOfFile:thePath];
             [btnNote setFrame:CGRectMake(0, 0, self.view.frame.size.width, 2*sizeText.height)];
             [btnNote addTarget:self action:@selector(processActionTouchStatus) forControlEvents:UIControlEventTouchUpInside];
             [btnNote setBackgroundColor:[UIColor orangeColor]];

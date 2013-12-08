@@ -5,11 +5,21 @@
 //  Created by nhanmt on 1/8/13.
 //  Copyright (c) 2013 Phuong. Nguyen Minh. All rights reserved.
 //
-#define SECTION_SALE_OFF 0
-#define SECTION_FILM_INFO SECTION_SALE_OFF + 1
-#define SECTION_ACTOR   SECTION_FILM_INFO + 1
-#define SECTION_COMMENT SECTION_ACTOR + 1
-#define MAX_SECTION_TABLE SECTION_COMMENT + 1
+
+//#define SECTION_SALE_OFF 0
+//#define SECTION_FILM_INFO SECTION_SALE_OFF + 1
+//#define SECTION_ACTOR   SECTION_FILM_INFO + 1
+//#define SECTION_COMMENT SECTION_ACTOR + 1
+//#define MAX_SECTION_TABLE SECTION_COMMENT + 1
+
+typedef enum
+{
+    SECTION_SALE_OFF = 0,
+    SECTION_FILM_INFO,
+    SECTION_ACTOR,
+    SECTION_COMMENT,
+    MAX_SECTION_TABLE
+} ENUM_FILM_DETAIL_SECTION;
 
 
 #import "FilmDetailViewController.h"
@@ -27,6 +37,7 @@
 #import "MainViewController.h"
 #import "DefineString.h"
 #import "CellFilmSaleOff.h"
+#import "AboutViewController.h"
 
 @interface FilmDetailViewController()<NSFetchedResultsControllerDelegate, RKManagerDelegate>
 {
@@ -897,7 +908,9 @@ static NSMutableArray* filmStack;
         [cinemaFilmController setFilm:film];
         cinemaFilmController.stepNextDayShowSession = [NSDate daysBetween:[NSDate date] and:self.nearestSessionDate];
         [cinemaFilmController requestAPIGetListCinemaSession];
-        [cinemaFilmController setHidesBottomBarWhenPushed:YES];
+        
+//        [cinemaFilmController setTabBarDisplayType:TAB_BAR_DISPLAY_HIDE];
+//        [cinemaFilmController setHidesBottomBarWhenPushed:YES];
         [self.navigationController pushViewController:cinemaFilmController animated:YES];
     }
 }

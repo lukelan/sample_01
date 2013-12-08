@@ -158,7 +158,7 @@ typedef NS_ENUM(NSInteger, BANK_USING_WEB_TYPE)
 
 -(UIView *)viewAtParamIndex:(NSUInteger)paramIndex forConfirmView:(BOOL)forConfirmView;
 -(CustomTextView *)inputViewAtParamIndex:(NSInteger) paramIndex forConfirmView:(BOOL)forConfirmView;
--(BOOL)initInputViewsWithLoadInfo:(NSDictionary*)loadInfo forConfirmView:(BOOL)forConfirmView;
+-(void)initInputViewsWithLoadInfo:(NSDictionary*)loadInfo forConfirmView:(BOOL)forConfirmView;
 -(NSMutableDictionary *)dictionaryInputForSending:(BOOL)sending forConfirmView:(BOOL)forConfirmView;
 
 @end

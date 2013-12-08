@@ -170,6 +170,10 @@ static bool distanceGetFromCurrentPos = NO;
         [self loadDataForView];
         Location* city = [APIManager loadLocationObject];
         [[APIManager sharedAPIManager] getListAllCinemaByLocation:city.location_id context:self];
+        
+        // TrongV - 08/12/2013 - Show Tab bar as default
+        self.tabBarDisplayType = TAB_BAR_DISPLAY_SHOW;
+        
         viewName = CINEMA_VIEW_NAME;
         
         NSNotificationCenter* receiveNotification = [NSNotificationCenter defaultCenter];

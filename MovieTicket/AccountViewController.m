@@ -95,7 +95,12 @@ static bool isEvent = NO;
         [self.tabBarItem setTitle:@"Cá nhân"];
         [self.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:@"footer-button-personal-active.png"]
                       withFinishedUnselectedImage:[UIImage imageNamed:@"footer-button-personal.png"]];
-
+        
+        // TrongV - 08/12/2013 - Make the same style with others tabbar items.
+        [[self tabBarItem] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                   [UIColor whiteColor], UITextAttributeTextColor,
+                                                   nil] forState:UIControlStateNormal];
+        
         self.locationDescription = @"";
         self.isNeedUpdateData = NO;
         self.isLocationUpdating = NO;
@@ -104,7 +109,11 @@ static bool isEvent = NO;
         friendList123Phim = [[NSMutableArray alloc] init];
         self.friendList = [[NSMutableArray alloc] init];
         eventList = [[NSMutableArray alloc] init];
-        viewName = ACCOUNT_VIEW_NAME;        
+        
+        // TrongV - 08/12/2013 - Show Tab bar as default
+        self.tabBarDisplayType = TAB_BAR_DISPLAY_SHOW;
+        
+        viewName = ACCOUNT_VIEW_NAME;
         
         //register receiving new city notification
         NSNotificationCenter* receiveNotification = [NSNotificationCenter defaultCenter];
