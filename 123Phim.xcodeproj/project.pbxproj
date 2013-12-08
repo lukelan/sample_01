@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181599061854C6E500FA2D63 /* CinemaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181599051854C6E500FA2D63 /* CinemaTableViewCell.m */; };
+		1815990D1854C72900FA2D63 /* CinemaTableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 181599071854C72900FA2D63 /* CinemaTableViewItem.m */; };
+		1815990E1854C72900FA2D63 /* CinemaTableViewPlaceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1815990A1854C72900FA2D63 /* CinemaTableViewPlaceItem.m */; };
+		1815990F1854C72900FA2D63 /* CinemaTableViewLocationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1815990C1854C72900FA2D63 /* CinemaTableViewLocationItem.m */; };
+		181599121854CA0B00FA2D63 /* CinemaTableViewLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181599111854CA0B00FA2D63 /* CinemaTableViewLocationCell.m */; };
+		181599151854CA1E00FA2D63 /* CinemaTableViewPlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181599141854CA1E00FA2D63 /* CinemaTableViewPlaceCell.m */; };
 		2810C6BE1713BFD5007F4D9F /* ShareTemplateViewDescription.html in Resources */ = {isa = PBXBuildFile; fileRef = 2810C6BD1713BFD5007F4D9F /* ShareTemplateViewDescription.html */; };
 		2810C6C21713C929007F4D9F /* comment_box_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 2810C6C01713C929007F4D9F /* comment_box_full.png */; };
 		2810C6C31713C929007F4D9F /* comment_box_full@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2810C6C11713C929007F4D9F /* comment_box_full@2x.png */; };
@@ -616,6 +622,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		181599041854C6E500FA2D63 /* CinemaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CinemaTableViewCell.h; path = MovieTicket/CustomTableViewCell/Cinema/CustomTable/TableCells/CinemaTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		181599051854C6E500FA2D63 /* CinemaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CinemaTableViewCell.m; path = MovieTicket/CustomTableViewCell/Cinema/CustomTable/TableCells/CinemaTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		181599071854C72900FA2D63 /* CinemaTableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinemaTableViewItem.m; sourceTree = "<group>"; };
+		181599081854C72900FA2D63 /* CinemaTableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinemaTableViewItem.h; sourceTree = "<group>"; };
+		181599091854C72900FA2D63 /* CinemaTableViewPlaceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinemaTableViewPlaceItem.h; sourceTree = "<group>"; };
+		1815990A1854C72900FA2D63 /* CinemaTableViewPlaceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinemaTableViewPlaceItem.m; sourceTree = "<group>"; };
+		1815990B1854C72900FA2D63 /* CinemaTableViewLocationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinemaTableViewLocationItem.h; sourceTree = "<group>"; };
+		1815990C1854C72900FA2D63 /* CinemaTableViewLocationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinemaTableViewLocationItem.m; sourceTree = "<group>"; };
+		181599101854CA0B00FA2D63 /* CinemaTableViewLocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinemaTableViewLocationCell.h; sourceTree = "<group>"; };
+		181599111854CA0B00FA2D63 /* CinemaTableViewLocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinemaTableViewLocationCell.m; sourceTree = "<group>"; };
+		181599131854CA1E00FA2D63 /* CinemaTableViewPlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinemaTableViewPlaceCell.h; sourceTree = "<group>"; };
+		181599141854CA1E00FA2D63 /* CinemaTableViewPlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinemaTableViewPlaceCell.m; sourceTree = "<group>"; };
 		1CA13FBF8D244CACA38AFD54 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2810C6BD1713BFD5007F4D9F /* ShareTemplateViewDescription.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ShareTemplateViewDescription.html; sourceTree = "<group>"; };
 		2810C6C01713C929007F4D9F /* comment_box_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comment_box_full.png; sourceTree = "<group>"; };
@@ -1495,6 +1513,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		181598F61854C4B900FA2D63 /* CustomTable */ = {
+			isa = PBXGroup;
+			children = (
+				181598F91854C4DE00FA2D63 /* TableItems */,
+				181598FA1854C4DE00FA2D63 /* TableCells */,
+			);
+			path = CustomTable;
+			sourceTree = "<group>";
+		};
+		181598F91854C4DE00FA2D63 /* TableItems */ = {
+			isa = PBXGroup;
+			children = (
+				181599071854C72900FA2D63 /* CinemaTableViewItem.m */,
+				181599081854C72900FA2D63 /* CinemaTableViewItem.h */,
+				181599091854C72900FA2D63 /* CinemaTableViewPlaceItem.h */,
+				1815990A1854C72900FA2D63 /* CinemaTableViewPlaceItem.m */,
+				1815990B1854C72900FA2D63 /* CinemaTableViewLocationItem.h */,
+				1815990C1854C72900FA2D63 /* CinemaTableViewLocationItem.m */,
+			);
+			path = TableItems;
+			sourceTree = "<group>";
+		};
+		181598FA1854C4DE00FA2D63 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				181599041854C6E500FA2D63 /* CinemaTableViewCell.h */,
+				181599051854C6E500FA2D63 /* CinemaTableViewCell.m */,
+				181599101854CA0B00FA2D63 /* CinemaTableViewLocationCell.h */,
+				181599111854CA0B00FA2D63 /* CinemaTableViewLocationCell.m */,
+				181599131854CA1E00FA2D63 /* CinemaTableViewPlaceCell.h */,
+				181599141854CA1E00FA2D63 /* CinemaTableViewPlaceCell.m */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
 		289BBDB0170047CC00B69B31 /* css */ = {
 			isa = PBXGroup;
 			children = (
@@ -2234,6 +2287,7 @@
 		4F2B3417172A40E5009D6559 /* Cinema */ = {
 			isa = PBXGroup;
 			children = (
+				181598F61854C4B900FA2D63 /* CustomTable */,
 				4F2B3418172A40E5009D6559 /* CellFilm.h */,
 				4F2B3419172A40E5009D6559 /* CellFilm.m */,
 				A9969F3217530D47004A122A /* CinemaInfoCell.h */,
@@ -3761,11 +3815,13 @@
 				4FC6ECD216A5416000D57134 /* FilmCinemaViewController.m in Sources */,
 				4F001FA216A7AF770026E4D2 /* Film.m in Sources */,
 				4F001FA816A7AF770026E4D2 /* Cinema.m in Sources */,
+				1815990E1854C72900FA2D63 /* CinemaTableViewPlaceItem.m in Sources */,
 				4F001FAE16A7AF770026E4D2 /* Comment.m in Sources */,
 				4FF04AD8184C9E580090CE3D /* NSString+SHA.m in Sources */,
 				4FF04AB7184C9E580090CE3D /* CellDetailapp.m in Sources */,
 				4F001FB416A7AF770026E4D2 /* Location.m in Sources */,
 				4F8DEB2E16B283000008DAF5 /* ShowMapViewController.m in Sources */,
+				181599121854CA0B00FA2D63 /* CinemaTableViewLocationCell.m in Sources */,
 				4F52D71E16BB1B5700DD09FD /* Position.m in Sources */,
 				E3E7407316BEB80200764B53 /* CinemaWithDistance.m in Sources */,
 				4F4DF8D816C09EC600458F8F /* CoreDataMovie.xcdatamodeld in Sources */,
@@ -3802,11 +3858,13 @@
 				4F8F70E31712731600C3E7EC /* VersionNotificationViewController.m in Sources */,
 				A9B94BCD171FDC3B00AA6BBB /* MKPolyLine+MKPolyLine_MKPolyline_EncodedString.m in Sources */,
 				A9B94BE31720014400AA6BBB /* Place.m in Sources */,
+				181599151854CA1E00FA2D63 /* CinemaTableViewPlaceCell.m in Sources */,
 				4FF04ACC184C9E580090CE3D /* UIViewController+TabBarAnimation.m in Sources */,
 				A9B94BE51720014400AA6BBB /* PlaceMark.m in Sources */,
 				A973384D172001FD00BD84E4 /* RegexKitLite.m in Sources */,
 				4F94308A17262FAE007C6C51 /* CheckoutWebViewController.m in Sources */,
 				A975A3B11727CC8F00825BFA /* InputTextForFBSharingViewController.m in Sources */,
+				181599061854C6E500FA2D63 /* CinemaTableViewCell.m in Sources */,
 				4F2B3400172A2E15009D6559 /* AutoScrollLabel.m in Sources */,
 				4F2B3401172A2E15009D6559 /* GradientButton.m in Sources */,
 				4F2B3402172A2E15009D6559 /* ComboBoxView.m in Sources */,
@@ -3845,6 +3903,7 @@
 				4F2B3456172A40E5009D6559 /* PromotionInfoCell.m in Sources */,
 				4F2B3457172A40E5009D6559 /* SeatView.m in Sources */,
 				4F2B345B172A41E6009D6559 /* GalleryPageView.m in Sources */,
+				1815990F1854C72900FA2D63 /* CinemaTableViewLocationItem.m in Sources */,
 				4F2B3462172A6E1A009D6559 /* SelectTypeThanhToanViewController.m in Sources */,
 				4F0EB3FC173367C6001E63FE /* CustomTextView.m in Sources */,
 				4F117FA11738E9D300C4449A /* UICheckBox.m in Sources */,
@@ -3894,6 +3953,7 @@
 				4F90769F1769CE14002B3CBE /* pngwrite.c in Sources */,
 				4FF04AEE184C9E590090CE3D /* ADNDetailViewController.m in Sources */,
 				4F9076A01769CE14002B3CBE /* pngwtran.c in Sources */,
+				1815990D1854C72900FA2D63 /* CinemaTableViewItem.m in Sources */,
 				4FF04ACB184C9E580090CE3D /* UIViewController+CustomNavigation.m in Sources */,
 				4F9076A11769CE14002B3CBE /* pngwutil.c in Sources */,
 				4F92AA8D176AC9A20064CCFF /* BarCodeViewController.m in Sources */,
