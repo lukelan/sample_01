@@ -16,6 +16,14 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
+        self.backgroundColor = [UIColor clearColor];
+        self.contentView.backgroundColor = [UIColor whiteColor];
+        
+        // arrow
+        UIImageView *arrowImage = [[UIImageView alloc] initWithFrame:CGRectMake(297, 16, 12, 18 )];
+        [arrowImage setImage:[UIImage imageNamed:@"arrow_right"]];
+        [self.contentView addSubview:arrowImage];
+        
         // Initialization code
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didSelect)];
         [self addGestureRecognizer:tapGesture];
@@ -44,8 +52,8 @@
 
 -(void)didSelect
 {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(vkTableViewCell:didSelect:atIndex:)]) {
-        [self.delegate vkTableViewCell:self didSelect:self.object atIndex:0];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(cinemaTableViewCell:didSelect:atIndex:)]) {
+        [self.delegate cinemaTableViewCell:self didSelect:self.object atIndex:0];
     }
 }
 

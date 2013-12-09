@@ -10,11 +10,12 @@
 
 @implementation CinemaTableViewItem
 
--(id)initWithTitle:(NSString *)title
+-(id)initWithTitle:(NSString*)title andAddress:(NSString*)address
 {
     self = [super init];
     if (self) {
         _title = title;
+        _address = address;
     }
     return self;
 }

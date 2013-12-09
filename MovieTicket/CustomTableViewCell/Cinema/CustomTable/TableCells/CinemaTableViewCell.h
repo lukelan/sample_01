@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#define kCinemaTableViewPlaceCell_PaddingTop 3.0f
+#define kCinemaTableViewPlaceCell_PaddingBottom 12.0f
+
 @class CinemaTableViewCell;
 @protocol CinemaTableViewCellDelegate <NSObject>
 
 @optional
--(void)vkTableViewCell:(CinemaTableViewCell*)cell didSelect:(id)object atIndex:(NSInteger)index;
+-(void)cinemaTableViewCell:(CinemaTableViewCell*)cell didSelect:(id)object atIndex:(NSInteger)index;
 
 @end
 

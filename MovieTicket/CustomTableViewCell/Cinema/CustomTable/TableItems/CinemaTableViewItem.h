@@ -10,6 +10,8 @@
 
 @interface CinemaTableViewItem : NSObject
 @property (nonatomic, retain) NSString *title;
+@property (nonatomic, retain) NSString *address;
 
--(id)initWithTitle:(NSString*)title;
+-(id)initWithTitle:(NSString*)title andAddress:(NSString*)address;
+
 @end

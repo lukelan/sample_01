@@ -9,5 +9,7 @@
 #import "CinemaTableViewItem.h"
 
 @interface CinemaTableViewLocationItem : CinemaTableViewItem
+@property (nonatomic, assign) BOOL isActive;
 
+-(id)initWithTitle:(NSString *)title andAddress:(NSString *)address isActive:(BOOL)isLocationActive;
 @end

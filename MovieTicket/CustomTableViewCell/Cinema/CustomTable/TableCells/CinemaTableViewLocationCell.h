@@ -13,6 +13,7 @@
 {
     UIImageView *_imageView;
     UILabel *_titleLbl;
+    UILabel *_addressLbl;
 }
 
 @end

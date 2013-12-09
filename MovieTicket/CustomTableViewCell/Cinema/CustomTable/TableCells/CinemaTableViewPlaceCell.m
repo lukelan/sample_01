@@ -9,7 +9,7 @@
 #import "CinemaTableViewPlaceCell.h"
 
 #define kCinemaTableViewPlaceCell_ContentHeight 50.0f
-#define kCinemaTableViewPlaceCell_FooterHeight 32.0f
+#define kCinemaTableViewPlaceCell_FooterHeight 30.0f
 
 @implementation CinemaTableViewPlaceCell
 
@@ -39,37 +39,39 @@
         // content
         //
         // status image
-        _statusImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 49, 49)];
+        _statusImgView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 0, 49, 49)];
         [self.contentView addSubview:_statusImgView];
         
         // title
-        _titleLbl = [[UILabel alloc] initWithFrame:CGRectMake(54, 5 , 165, 21)];
-        _titleLbl.backgroundColor  = [UIColor clearColor];
+        _titleLbl = [[UILabel alloc] initWithFrame:CGRectMake(64, 5 , 220, 21)];
         _titleLbl.textColor = [UIColor blackColor];
         _titleLbl.font = [UIFont fontWithName:@"Helvetica-Bold" size:12.0f];
         [self.contentView addSubview:_titleLbl];
         
         // address
-        _addressLbl = [[UILabel alloc] initWithFrame:CGRectMake(54, 23 , 200, 21)];
-        _addressLbl.textColor = [UIColor grayColor];
-        _addressLbl.font = [UIFont systemFontOfSize:17.0f];
+        _addressLbl = [[UILabel alloc] initWithFrame:CGRectMake(64, 23 , 220, 21)];
+        _addressLbl.font = [UIFont getFontNormalSize10];
         [self.contentView addSubview:_addressLbl];
         
         // discount
-        _discountImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 7, 40, 40)];
+        _discountImgView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 7, 40, 40)];
         [_discountImgView setImage:[UIImage imageNamed:@"film_sale_off_small.png"]];
         [self.contentView addSubview:_discountImgView];
         
-        _discountLbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 10 , 40, 20)];
+        _discountLbl = [[UILabel alloc] initWithFrame:CGRectMake(10, 10 , 40, 20)];
         _discountLbl.textColor = [UIColor whiteColor];
         _discountLbl.font = [UIFont fontWithName:@"Helvetica-Bold" size:14.0f];
         [self.contentView addSubview:_discountLbl];
+        
+        UIView *separator = [[UIView alloc] initWithFrame:CGRectMake(10, kCinemaTableViewPlaceCell_ContentHeight - 1, 310, 0.25f)];
+        separator.backgroundColor = [UIColor grayColor];
+        [self.contentView addSubview:separator];
         
         //
         // footer
         //
         // image
-        _footerImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, MARGIN_EDGE_TABLE_GROUP/2, 296, 22)];
+        _footerImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, kCinemaTableViewPlaceCell_ContentHeight + 4, 296, 22)];
         _footerImage.image = [UIImage imageNamed:@"theater_distance_time.png"];
         [self.contentView addSubview:_footerImage];
         
@@ -95,15 +97,19 @@
         [self.contentView addSubview:_estimateTimeCarLbl];
         
         // you are here section
-        _youAreHereImage = [[UIImageView alloc] initWithFrame:CGRectMake(10, kCinemaTableViewPlaceCell_ContentHeight + 2, 56, 42)];
+        _youAreHereImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, kCinemaTableViewPlaceCell_ContentHeight - 5, 56, 42)];
+        [_youAreHereImage setImage:[UIImage imageNamed:@"cinema_person"]];
         [self.contentView addSubview:_youAreHereImage];
         
-        _youAreHereLbl = [[UILabel alloc] initWithFrame:CGRectMake(37, kCinemaTableViewPlaceCell_ContentHeight + 2 , 250, 30)];
+        _youAreHereLbl = [[UILabel alloc] initWithFrame:CGRectMake(60, kCinemaTableViewPlaceCell_ContentHeight + 2 , 250, 30)];
         _youAreHereLbl.backgroundColor  = [UIColor clearColor];
         _youAreHereLbl.textColor = [UIColor grayColor];
         _youAreHereLbl.font = [UIFont getFontBoldSize10];
         _youAreHereLbl.text = @"Bạn đang ở tại rạp này";
         [self.contentView addSubview:_youAreHereLbl];
+        
+        // make opaque to improve performance
+        [self.contentView.subviews makeObjectsPerformSelector:@selector(setOpaque:) withObject:@(YES)];
         
         _youAreHereLbl.hidden = _youAreHereImage.hidden = YES;
     }
@@ -114,7 +120,7 @@
 
 +(CGFloat)tableView:(UITableView *)tableView rowHeightForObject:(id)object
 {
-    return kCinemaTableViewPlaceCell_ContentHeight + kCinemaTableViewPlaceCell_FooterHeight;
+    return kCinemaTableViewPlaceCell_ContentHeight + kCinemaTableViewPlaceCell_FooterHeight + kCinemaTableViewPlaceCell_PaddingTop + kCinemaTableViewPlaceCell_PaddingBottom;
 }
 
 -(void)setObject:(id)object
@@ -138,6 +144,10 @@
 -(void)layoutSubviews
 {
     [super layoutSubviews];
+    CGRect r = self.contentView.frame;
+    r.origin.y = kCinemaTableViewPlaceCell_PaddingTop;
+    r.size.height = CGRectGetHeight(self.frame) - kCinemaTableViewPlaceCell_PaddingTop - kCinemaTableViewPlaceCell_PaddingBottom;
+    self.contentView.frame = r;
 }
 
 @end
